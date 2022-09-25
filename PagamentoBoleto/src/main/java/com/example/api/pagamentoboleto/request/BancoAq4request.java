@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "bancoAq4", url = "http://localhost:8081")
 public interface BancoAq4request {
-    @GetMapping("/bancoAq4/{id}")
+    @GetMapping("/contas/{id}")
     ContaPagamentoDto getByCode(
     @PathVariable long id
     );

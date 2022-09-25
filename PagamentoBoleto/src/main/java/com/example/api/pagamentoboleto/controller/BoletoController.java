@@ -22,7 +22,7 @@ public class BoletoController {
     @Autowired
     private BancoAq4request request;
 
-    @PostMapping(path = "/boleto")
+    @PostMapping
     public ResponseEntity<TransacaoDTO> boleto(@RequestBody TransacaoDTO transacaoDTO){
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<TransacaoDTO> request = new HttpEntity<>(transacaoDTO);
